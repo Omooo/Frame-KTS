@@ -1,3 +1,5 @@
+import top.omooo.buildsrc.Config
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -5,13 +7,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(28)
+    compileSdkVersion(Config.compileSdkVersion)
     defaultConfig {
-        applicationId = "top.omooo.frame"
-        minSdkVersion(26)
-        targetSdkVersion(28)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Config.applicationId
+        minSdkVersion(Config.minSdkVersion)
+        targetSdkVersion(Config.targetSdkVersion)
+        versionCode = Config.versionCode
+        versionName = Config.versionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes.invoke {
